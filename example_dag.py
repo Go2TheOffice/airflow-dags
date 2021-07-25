@@ -33,12 +33,12 @@ default_args = {
     # 'trigger_rule': 'all_success'
 }
 with DAG(
-    'tutorial',
+    'hello world',
     default_args=default_args,
-    description='A simple tutorial DAG',
+    description='Modified version of the simple tutorial DAG',
     schedule_interval=timedelta(days=1),
     start_date=days_ago(2),
-    tags=['example'],
+    tags=['hello_world'],
 ) as dag:
 
     # t1, t2 and t3 are examples of tasks created by instantiating operators
