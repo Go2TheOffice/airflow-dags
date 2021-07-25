@@ -33,7 +33,7 @@ default_args = {
     # 'trigger_rule': 'all_success'
 }
 with DAG(
-    'hello world',
+    'hello_world',
     default_args=default_args,
     description='Modified version of the simple tutorial DAG',
     schedule_interval=timedelta(days=1),
