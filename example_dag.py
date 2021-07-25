@@ -33,18 +33,18 @@ default_args = {
     # 'trigger_rule': 'all_success'
 }
 with DAG(
-    'hello_world_2',
+    'hello_world',
     default_args=default_args,
     description='Modified version of the simple tutorial DAG',
     schedule_interval=timedelta(days=1),
     start_date=days_ago(2),
-    tags=['hello_world_2'],
+    tags=['hello_world'],
 ) as dag:
 
     # t1, t2 and t3 are examples of tasks created by instantiating operators
     t1 = BashOperator(
         task_id='print_date',
-        bash_command='echo "hello world!"',
+        bash_command='echo "hello world 1234"',
     )
 
     t2 = BashOperator(
